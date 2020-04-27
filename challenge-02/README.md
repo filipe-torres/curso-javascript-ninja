@@ -42,7 +42,7 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function multiplicaesoma(num1, num2, num3) {
-  if(num1 === null || num2 === null || num3 === null) {
+  if(num1 === undefined || num2 === undefined || num3 === undefined) {
     return 'Preencha todos os valores corretamente!';
   }
   return num1 * num2 * num3 + 2;
@@ -52,13 +52,13 @@ function multiplicaesoma(num1, num2, num3) {
 multiplicaesoma(2,3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// Preencha todos os valores corretamente!
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+multiplicaesoma(2,3,4);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 26
 
 /*
 Crie uma função com as seguintes características:
@@ -69,8 +69,42 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function somaedivide(num1, num2, num3) {
+  /*
+  if(num1 !== undefined && num2 !== undefined && num3 !== undefined && num3 !== 0) {
+    return (num1 + num2) / num3;
+  } else if(num1 === undefined && num2 === undefined && num3 === undefined) {
+    return false
+  }
+  */
+  
+  if(num1 !== undefined) {
+    if(num2 !== undefined) {
+      if(num3 !== undefined) {
+        return (num1 + num2) / num3;
+      } else {
+        return num1 + num2;
+      }
+    } else if(num3 !== undefined) {
+      return num1 + num3;
+    } 
+  } else if(num2 !== undefined) {
+    if(num3 !== undefined) {
+      return num2 + num3;
+    } else {
+      return num2;
+    }
+  } else if(num3 !== undefined) {
+    return num3;
+  } else {
+    return false;
+  }
+  return null;
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+somaedivide() // 
+somaedivide(2) // 
+somaedivide(2,3) // 
+somaedivide(2,3,4) // 
 ```
