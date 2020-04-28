@@ -70,14 +70,6 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function somaedivide(num1, num2, num3) {
-  /*
-  if(num1 !== undefined && num2 !== undefined && num3 !== undefined && num3 !== 0) {
-    return (num1 + num2) / num3;
-  } else if(num1 === undefined && num2 === undefined && num3 === undefined) {
-    return false
-  }
-  */
-  
   if(num1 !== undefined) {
     if(num2 !== undefined) {
       if(num3 !== undefined) {
@@ -103,8 +95,8 @@ function somaedivide(num1, num2, num3) {
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-somaedivide() // 
-somaedivide(2) // 
-somaedivide(2,3) // 
-somaedivide(2,3,4) // 
+somaedivide() // false
+somaedivide(2) // 2
+somaedivide(2,3) // 5
+somaedivide(2,3,4) // 1.25
 ```
