@@ -28,10 +28,10 @@ function adicionarvalor() {
 }
 
 // Invoque a função criada acima.
-adicionarvalor(4)
+adicionarvalor()
 
 // Qual o retorno da função? (Use comentários de bloco).
-/* O valor da variável agora é 4 */
+/* O valor da variável agora é 12 */
 
 /*
 Crie uma função com as seguintes características:
@@ -68,25 +68,25 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function somaedivide(num1, num2, num3) {
-  if(num1 !== undefined) {
-    if(num2 !== undefined) {
-      if(num3 !== undefined) {
-        return (num1 + num2) / num3;
+function somaedivide(a, b, c) {
+  if(a !== undefined) {
+    if(b !== undefined) {
+      if(c !== undefined) {
+        return (a + b) / c;
       } else {
-        return num1 + num2;
+        return a + b;
       }
-    } else if(num3 !== undefined) {
-      return num1 + num3;
+    } else if(c !== undefined) {
+      return a + c;
     } 
-  } else if(num2 !== undefined) {
-    if(num3 !== undefined) {
-      return num2 + num3;
+  } else if(b !== undefined) {
+    if(c !== undefined) {
+      return b + c;
     } else {
-      return num2;
+      return b;
     }
-  } else if(num3 !== undefined) {
-    return num3;
+  } else if(c !== undefined) {
+    return c;
   } else {
     return false;
   }
