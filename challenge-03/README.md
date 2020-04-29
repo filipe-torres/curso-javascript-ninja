@@ -96,25 +96,25 @@ Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários 
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.nomeCompleto(); // Olá! Meu nome é Filipe Torres!
+pessoa.nomeCompleto(); // "Olá! Meu nome é Filipe Torres!"
 
 /*
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.mostrarIdade(); // Olá, eu tenho 46 anos!
+pessoa.mostrarIdade(); // "Olá, eu tenho 46 anos!"
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.mostrarPeso(); // Eu peso 73Kg.
+pessoa.mostrarPeso(); // "Eu peso 73Kg."
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.mostrarAltura // Minha altura é 1.70m.
+pessoa.mostrarAltura // "Minha altura é 1.70m."
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
@@ -128,7 +128,7 @@ Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
-pessoa.mostrarIdade(); // Olá, eu tenho 49 anos!
+pessoa.mostrarIdade(); // "Olá, eu tenho 49 anos!"
 
 /*
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
