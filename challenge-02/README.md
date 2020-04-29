@@ -68,25 +68,25 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function somaedivide(a, b, c) {
-  if(a !== undefined) {
-    if(b !== undefined) {
-      if(c !== undefined) {
-        return (a + b) / c;
+function somaedivide(x, y, z) {
+  if(x !== undefined) {
+    if(y !== undefined) {
+      if(z !== undefined) {
+        return (x + y) / z;
       } else {
-        return a + b;
+        return x + y;
       }
-    } else if(c !== undefined) {
-      return a + c;
+    } else if(z !== undefined) {
+      return x + z;
     } 
-  } else if(b !== undefined) {
-    if(c !== undefined) {
-      return b + c;
+  } else if(y !== undefined) {
+    if(z !== undefined) {
+      return y + z;
     } else {
-      return b;
+      return y;
     }
-  } else if(c !== undefined) {
-    return c;
+  } else if(z !== undefined) {
+    return z;
   } else {
     return false;
   }
