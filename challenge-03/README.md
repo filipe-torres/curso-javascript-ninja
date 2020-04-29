@@ -33,7 +33,7 @@ alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
 pessoa.fazerAniversario = function() {
-  ++pessoa.idade
+  pessoa.idade++
 }
 
 /*
@@ -88,7 +88,7 @@ Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
 pessoa.mostrarAltura = function() {
-  return 'Minha altura é  ' + pessoa.altura + 'm.';
+  return 'Minha altura é ' + pessoa.altura + 'm.';
 }
 
 /*
@@ -179,26 +179,20 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function() {
-  var generoArtigo, anoNumero, metroNumero;
+  var sexo = 'o', idadeAnos = 'anos', metrosCaminhados = 'metros';
   if(pessoa.sexo === 'Feminino') {
-    generoArtigo = 'a';
-  } else {
-    generoArtigo = 'o';
+    sexo = 'a';
   }
   
   if(pessoa.idade === 1) {
-    anoNumero = 'ano';
-  } else {
-    anoNumero = 'anos';
+    idadeAnos = 'ano';
   }
   
   if(pessoa.caminhouQuantosMetros === 1) {
-    metroNumero = 'metro';
-  } else {
-    metroNumero = 'metros';
+    metrosCaminhados = 'metro';
   }
   
-  return 'Olá, eu sou ' + generoArtigo + ' ' + pessoa.nome + ', tenho ' + pessoa.idade + anoNumero + ' , ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + metroNumero +'!';
+  return 'Olá, eu sou ' + sexo + ' ' + pessoa.nome + ', tenho ' + pessoa.idade + ' ' + idadeAnos + ' , ' + pessoa.altura + 'm, meu peso é ' + pessoa.peso + 'Kg e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + metrosCaminhados +'!';
 }
 
 // Agora, apresente-se ;)
