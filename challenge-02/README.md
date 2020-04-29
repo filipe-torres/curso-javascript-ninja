@@ -69,7 +69,20 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function somaedivide(x, y, z) {
-  if(x !== undefined) {
+  if(x !== undefined && y === undefined && z === undefined) {
+    return x;
+  } else if(x !== undefined && y !== undefined && z === undefined) {
+    return x + y;
+  } else if(x !== undefined && y !== undefined && z !== undefined) {
+    return (x + y) / z;
+  } else if(x === undefined && y === undefined && z === undefined) {
+    return false;
+  }
+  return null
+}
+  
+  // Primeira tentativa
+  /*if(x !== undefined) {
     if(y !== undefined) {
       if(z !== undefined) {
         return (x + y) / z;
@@ -90,7 +103,7 @@ function somaedivide(x, y, z) {
   } else {
     return false;
   }
-  return null;
+  return null;*/
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
