@@ -7,8 +7,20 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
-var isTruthy = function(a) {
-  return !!a === true ? true : false;
+/*
+var isTruthy = function(param) {
+  return !!param ? true : false;
+}
+*/
+
+*/
+var isTruthy = function(param) {
+  return param ? true : false;
+}
+*/
+
+var isTruthy = function(param) {
+  return !!param;
 }
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
@@ -32,7 +44,7 @@ isTruthy(' ');
 isTruthy(true);
 isTruthy({});
 isTruthy([]);
-isTruthy('0');
+isTruthy(function() {});
 
 
 /*
@@ -93,7 +105,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function() {
-  return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo;
+  return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo();
 }
 
 /*
@@ -112,18 +124,23 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoas = function(pessoas) {
+carro.adicionarPessoas = function(numeroPessoas) {
   var assentosDisponiveis = carro.assentos - carro.quantidadePessoas, numPessoas;
-  if( pessoas < assentosDisponiveis ){
-    carro.quantidadePessoas += pessoas;
+  if( numeroPessoas < assentosDisponiveis ){
+    carro.quantidadePessoas += numeroPessoas;
     return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
-  } else if( pessoas === assentosDisponiveis || assentosDisponiveis === 0 ){
-    if( assentosDisponiveis !== 0 ? ) carro.quantidadePessoas += pessoas;
+  } else if( numeroPessoas === assentosDisponiveis || assentosDisponiveis === 0 ){
+    if( assentosDisponiveis !== 0 ? ) carro.quantidadePessoas += numeroPessoas;
     return 'O carro já está lotado!';
-  } else if( pessoas > assentosDisponiveis ){
+  } else if( numeroPessoas > assentosDisponiveis ){
     numPessoas = assentosDisponiveis === 1 ? 'pessoa' : 'pessoas';
     return 'Só cabem mais ' + assentosDisponiveis + ' ' + numPessoas + '!';
   }
+}
+
+carro.adicionarPessoas = function(numeroPessoas) {
+  var totalPessoas = carro.quantidadePessoas + numeroPessoas;
+  return 'Já temos ' + totalPessoas + ' pessoas no carro!';
 }
 
 /*
